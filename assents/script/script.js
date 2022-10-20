@@ -15,19 +15,6 @@ navItem.forEach((element) => {
     styleElement(element, 'paddingRight', '23px')
 });
 
-window.onclick = () => {
-    navItem.forEach((secondElement) => {
-        let popup = secondElement.querySelector('.popup');
-
-        if (!popup) return;
-
-        popup.setAttribute('aria-expanded', false);
-        secondElement.classList.replace('toggle-up', 'toggle-down');
-    });
-}
-
-
-
 function hideAll(firstElement) {
     navItem.forEach((secondElement) => {
         let popup = secondElement.querySelector('.popup');
