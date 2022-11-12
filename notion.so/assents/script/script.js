@@ -4,6 +4,20 @@ let navItem = Array.from(document.querySelectorAll('.nav-item'));
 
 let open = []
 
+document.addEventListener('click', (e) => {
+    let element = e.target;
+
+    if (element.closest('.nav-section, .nav-item > * , .nav-item-boby')) {
+        return
+    };
+    
+
+    navItem.forEach( (element) => {
+        hideAll(element.querySelector('.nav-item'))
+    }); 
+
+})
+
 navItem.forEach((element) => {
     element.addEventListener('click', () => { 
         hideAll(element)
